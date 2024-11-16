@@ -1,8 +1,5 @@
 from .base_page import BasePage
-from selenium import webdriver
-from selenium.webdriver.common.by import By
 from .locators import ProductPageLocators
-from .locators import BasketPageLocators
 
 class ProductPage(BasePage):
 
@@ -24,7 +21,6 @@ class ProductPage(BasePage):
 
     def add_product_to_basket(self):
         self.browser.find_element(*ProductPageLocators.BASKET_BUTTON).click()
-        #assert self.is_element_present(*ProductPageLocators.BASKET_BUTTON), "Basket button is not found"
 
     def should_be_product_name(self, in_basket_product_name):
         basket_product_name = self.browser.find_element(*ProductPageLocators.BASKET_PRODUCT_NAME).text

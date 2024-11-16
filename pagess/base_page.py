@@ -1,4 +1,3 @@
-import time
 from .locators import BasePageLocators
 from .locators import BasketPageLocators
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
